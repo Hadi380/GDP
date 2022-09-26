@@ -1,7 +1,7 @@
 import streamlit as st
 st.title("GDP and GDP per Capita in Countries")
 import pandas as pd
-gdp = pd.read_csv(r"C:\Users\hadik\OneDrive\Desktop\Assignment streamlit\GPD by Country.csv")
+gdp = pd.read_csv(r"GPD by Country.csv")
 gdp.head()
 import plotly.express as px
 gdp_USA = gdp[ gdp["Country Name"]== "United States"]
@@ -13,7 +13,7 @@ col2.metric("GDP 2019", "21.3 T", "Top 2")
 col3.metric("GDP 2020", "20.8 T", "Top 3")
 gdp_2021 = gdp.loc[gdp['Year'] == 2021]
 gdp_2021.head()
-pop = pd.read_csv(r"C:\Users\hadik\OneDrive\Desktop\Assignment streamlit\pop_csv.csv",skiprows=4)
+pop = pd.read_csv(r"pop_csv.csv",skiprows=4)
 pop.head()
 pop_21= pop[['Country Name','2021']]
 pop_21.head()
